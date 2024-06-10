@@ -50,4 +50,11 @@ resource "aws_instance" "maheshec2" {
   tags = {
     "Name" = "maheshec2"
   }
-  }
+}
+
+  #Create Elastic Ip
+resource "aws_eip" "maheshEIP" {
+  instance = aws_instance.maheshec2id
+  domain = "vpc"
+  depends_on = [ aws_internet_gateway.maheshIG ]
+}
