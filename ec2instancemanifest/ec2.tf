@@ -47,6 +47,7 @@ resource "aws_instance" "maheshec2" {
   subnet_id = aws_subnet.maheshsubnet.id
   vpc_security_group_ids = [aws_security_group.maheshSG.id]
   user_data = file("apacheinstall.sh")
+  count = var.aws_instance_count
   tags = {
     "Name" = "maheshec2"
   }

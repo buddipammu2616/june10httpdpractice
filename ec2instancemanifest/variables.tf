@@ -15,7 +15,7 @@ variable "aws_ami_id" {
 variable "aws_instance_count" {
   description = "EC2 instance count variable create"
   type = number
-  default = 1
+  #default = 1
 }
 #Variable create for instance type
 variable "aws_instance_type" {
