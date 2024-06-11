@@ -9,3 +9,8 @@ output "aws_instance_privateip" {
   description = "EC2instance private ip"
   value = aws_instance.maheshec2.private_ip
 }
+#output value for SG
+output "security_group" {
+  description = "Security Group"
+  value = aws_instance.maheshec2.security_groups
+}
