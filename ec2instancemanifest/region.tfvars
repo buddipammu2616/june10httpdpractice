@@ -1,1 +1,1 @@
-aws_instance_count = 2
+#aws_instance_type = "t3.micro"
