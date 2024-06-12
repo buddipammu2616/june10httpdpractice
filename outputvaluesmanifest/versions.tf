@@ -13,6 +13,7 @@ terraform {
     region = "ap-south-1"
     key = "dev/terraform.state"
     dynamodb_table = "mahesh-buddi-pammu-DynamoDBTable"
+    encrypt = true
   }
 }
 #Provider Block
