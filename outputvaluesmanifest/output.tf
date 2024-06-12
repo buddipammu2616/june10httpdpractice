@@ -14,3 +14,8 @@ output "security_group" {
   description = "Security Group"
   value = aws_instance.maheshec2.security_groups
 }
+#Output value for AMI Id
+output "amazom_ami_id" {
+  description = "latest amazon ami id"
+  value = data.aws_ami.amazonlinuxamiid
+}
