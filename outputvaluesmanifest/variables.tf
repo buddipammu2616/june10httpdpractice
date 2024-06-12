@@ -23,5 +23,5 @@ variable "aws_instance_count" {
 variable "aws_instance_type" {
     description = "AWS instamce type created"
    type = string
-   default = "t3.micro"
+   default = "t3.small"
 }
