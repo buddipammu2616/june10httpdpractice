@@ -12,6 +12,7 @@ terraform {
     bucket = "buddipammukushi"
     region = "ap-south-1"
     key = "dev/terraform.state"
+    dynamodb_table = "mahesh-buddi-pammu-DynamoDBTable"
   }
 }
 #Provider Block
