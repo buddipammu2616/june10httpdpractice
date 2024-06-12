@@ -1,6 +1,6 @@
 #Create EC2 instance
 resource "aws_instance" "maheshec2" {
-  ami = var.aws_ami_id
+  ami = data.aws_ami.amazonlinuxamiid.id
   instance_type = var.aws_instance_type
   key_name = "terraform-keypair"
   user_data = file("apacheinstall.sh")
