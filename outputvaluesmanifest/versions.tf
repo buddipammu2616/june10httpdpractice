@@ -12,7 +12,7 @@ terraform {
     bucket = "buddipammukushi"
     region = "ap-south-1"
     key = "mahesh/terraform.tfstate"
-    dynamodb_table = "mahesh-buddi-pammu-DynamoDBTable"
+    dynamodb_table = "buddipammudynamodbtable"
     encrypt = true
   }
 }
