@@ -5,12 +5,14 @@ variable "aws_region" {
   type = string
   default = "ap-south-1"
 }
+/*
 #Create a variable for ami id
 variable "aws_ami_id" {
   description = "AWS Ami id created"
   type = string
   default = "ami-00fa32593b478ad6e"
 }
+*/
 #Create a variable for aws instance count
 variable "aws_instance_count" {
   description = "AWS instance count create"
