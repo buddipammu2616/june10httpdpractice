@@ -11,7 +11,7 @@ terraform {
   backend "s3" {
     bucket = "buddipammukushi"
     region = "ap-south-1"
-    key = "dev/terraform.state"
+    key = "statecommands/terraform.state"
     dynamodb_table = "mahesh-buddi-pammu-DynamoDBTable"
     encrypt = true
   }
