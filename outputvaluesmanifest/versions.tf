@@ -7,6 +7,12 @@ terraform {
         version = "~>5.0"
     }
   }
+  #Create a backend for S3
+  backend "s3" {
+    bucket = "buddipammukushi"
+    region = "ap-south-1"
+    key = "dev/terraform.state"
+  }
 }
 #Provider Block
 provider "aws" {
