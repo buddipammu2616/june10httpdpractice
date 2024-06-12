@@ -17,5 +17,5 @@ output "security_group" {
 #Output value for AMI Id
 output "amazom_ami_id" {
   description = "latest amazon ami id"
-  value = aws_ami.amazonlinuxamiid.amazom_ami_id
+  value = aws_ami.amazonlinuxamiid.aws_ami_id
 }
