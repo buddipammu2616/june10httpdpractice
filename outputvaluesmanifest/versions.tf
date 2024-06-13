@@ -12,6 +12,7 @@ terraform {
     bucket = "buddipammukushi"
     region = "ap-south-1"
     key = "mahesh/terraform.tfstate"
+    dynamodb_table = "mahesh-dynamodb-table"
   }
 }
 #Provider Block
