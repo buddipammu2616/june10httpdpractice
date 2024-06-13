@@ -14,6 +14,7 @@ variable "aws_ami_id" {
 }
 */
 #Create a variable for aws instance count
+# trunk-ignore(tflint/terraform_unused_declarations)
 variable "aws_instance_count" {
   description = "AWS instance count create"
   type = number
@@ -23,5 +24,5 @@ variable "aws_instance_count" {
 variable "aws_instance_type" {
     description = "AWS instamce type created"
    type = string
-   default = "t3.small"
+   default = "t3.micro"
 }
