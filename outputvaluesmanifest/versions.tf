@@ -7,6 +7,7 @@ terraform {
         version = "~>5.0"
     }
   }
+  /*
   #Create a backend for S3
   backend "s3" {
     bucket = "buddipammukushi"
@@ -15,6 +16,8 @@ terraform {
     dynamodb_table = "buddipammudynamodbtable"
     encrypt = true
   }
+
+*/
 }
 #Provider Block
 provider "aws" {
