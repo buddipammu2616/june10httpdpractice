@@ -7,6 +7,7 @@ terraform {
         version = "~>5.0"
     }
   }
+  /*
   #Create a S3 bucket for Backend
   backend "s3" {
     bucket = "buddipammukushi"
@@ -14,6 +15,8 @@ terraform {
     key = "mahesh2/terraform.tfstate"
     dynamodb_table = "mahesh-dynamodb-table"
   }
+
+*/
 }
 #Provider Block
 provider "aws" {
