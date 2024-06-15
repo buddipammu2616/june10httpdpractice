@@ -12,3 +12,9 @@ variable "aws_instance_type" {
   type = string
   default = "t2.small"
 }
+#Create a Variable for instance count
+variable "aws_instance_count" {
+  description = "aws instance count created"
+  type = number
+  default = 1
+}
