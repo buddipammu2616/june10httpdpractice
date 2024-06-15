@@ -41,3 +41,4 @@ Connection {
     source      = "apps/app2/" # when "/" at the end is added - CONTENTS of FOLDER WILL BE COPIED
     destination = "/tmp"
   }*/
+}
