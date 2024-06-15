@@ -1,5 +1,5 @@
 #Create a SEcurity Group
-resource "aws_security_group" "maheshSG" {
+resource "aws_security_group" "maheshSG2" {
   name = "maheshSG"
   description = "create a Mahesh SG"
   ingress {
