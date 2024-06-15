@@ -65,5 +65,5 @@ resource "aws_security_group" "maheshSG" {
 resource "aws_eip" "ElasticIp" {
   instance = aws_instance.maheshec2.id
   domain = "vpc"
-  depends_on = [ aws_internet_gateway.maheshIGW.id ]
+  depends_on = [aws_internet_gateway.maheshIGW]
 }
