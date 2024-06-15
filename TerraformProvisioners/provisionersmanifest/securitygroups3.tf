@@ -1,6 +1,6 @@
 #Create a SEcurity Group
-resource "aws_security_group" "maheshSG3" {
-  name = "maheshSG3"
+resource "aws_security_group" "maheshSG4" {
+  name = "maheshSG4"
   description = "create a Mahesh SG"
   ingress {
     description = "Allow port 22"
