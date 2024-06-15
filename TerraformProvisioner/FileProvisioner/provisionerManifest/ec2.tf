@@ -11,4 +11,5 @@ resource "aws_instance" "maheshec2" {
   tags = {
     "Name" = "Maheshec2"
   }
+  associate_public_ip_address = true
 }
