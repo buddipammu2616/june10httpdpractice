@@ -18,7 +18,7 @@ resource "aws_internet_gateway" "maheshIGW" {
 }
 #Create A Route Table
 resource "aws_route_table" "maheshRT" {
-  vpc_id = aws_subnet.maheshsubnet.id
+  vpc_id = aws_vpc.maheshVPC.id
 }
 #Create a Route in Route Table for Internet Access
 resource "aws_route" "maheshRT" {
