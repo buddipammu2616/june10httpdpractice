@@ -12,7 +12,7 @@ data "aws_ami" "amazonlinux" {
     values = ["ebs"]
   }
   filter {
-    name = "virtualization_type"
+    name = "virtualization-type"
     values = ["hvm"]
   }
   filter {
