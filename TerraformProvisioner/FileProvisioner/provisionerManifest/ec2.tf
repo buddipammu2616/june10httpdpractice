@@ -11,22 +11,25 @@ resource "aws_instance" "maheshec2" {
   tags = {
     "Name" = "Maheshec2"
   }
-  associate_public_ip_address = true
-
+  #associate_public_ip_address = true
+provisioner "file" {
+    source      = "apps/file-copy.html"
+    destination = "/tmp/file-copy.html"
+  }
 #Connection block
-Connection {
+connection {
   type = "ssh"
   host = self.public_ip
   user = "ec2.user"
   password = ""
-  terraformkeypair = "file(terraformkeypair/terraformkey.pem)"
+  private_key = "file(terraformkeypair/terraformkey.pem)"
 }
+/*
 # Copies the file-copy.html file to /tmp/file-copy.html
   provisioner "file" {
     source      = "apps/file-copy.html"
     destination = "/tmp/file-copy.html"
   }
-  /*
   # Copies the string in content into /tmp/file.log
   provisioner "file" {
     content     = "ami used: ${self.ami}" # Understand what is "self"
