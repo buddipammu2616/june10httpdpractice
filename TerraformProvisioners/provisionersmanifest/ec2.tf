@@ -7,4 +7,19 @@ resource "aws_instance" "maheshec2" {
   tags = {
     "Name" = "maheshec2"
   }
+  # PLAY WITH /tmp folder in EC2 Instance with File Provisioner
+  # Connection Block for Provisioners to connect to EC2 Instance
+  connection {
+    type = "ssh"
+    host = self.public_ip # Understand what is "self"
+    user = "ec2-user"
+    password = ""
+    private_key = file("private-key/mahesh-keypair.pem")
+  }
+
+ # Copies the file-copy.html file to /tmp/file-copy.html
+  provisioner "file" {
+    source      = "apps/file-copy.html"
+    destination = "/tmp/file-copy.html"
+  }
 }
