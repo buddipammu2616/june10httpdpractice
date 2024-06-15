@@ -23,4 +23,9 @@ resource "aws_instance" "maheshec2" {
     source      = "apps/file-copy.html"
     destination = "/tmp/file-copy.html"
   }
+  # Copies the app1 folder to /tmp - FOLDER COPY
+  provisioner "file" {
+    source      = "apps/app1"
+    destination = "/tmp"
+  }
 }
