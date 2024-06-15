@@ -22,7 +22,7 @@ connection {
   host = self.public_ip
   user = "ec2.user"
   password = ""
-  private_key = "file(terraformkeypair/terraformkey.pem)"
+  private_key = file("private-key/terraform-key.pem")
 }
 /*
 # Copies the file-copy.html file to /tmp/file-copy.html
