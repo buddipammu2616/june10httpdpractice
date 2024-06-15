@@ -17,5 +17,5 @@ output "ec2_security_group" {
 #output value for public DNS
 output "ec2_publicdns" {
   description = "public dns url of ec2 instance"
-  value = "http://${aws_instance.maheshec2.public_dns}"
+  value = "http://${aws_instance.maheshec2.private_dns}"
 }
