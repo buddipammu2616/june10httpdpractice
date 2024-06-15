@@ -28,4 +28,8 @@ resource "aws_instance" "maheshec2" {
     source      = "apps/app1"
     destination = "/tmp"
   }
+  provisioner "file" {
+    source = "apps/app2"
+    destination = "/tmp"
+  }
 }
