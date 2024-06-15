@@ -4,6 +4,7 @@ resource "aws_instance" "maheshec2" {
   instance_type = var.aws_instance_type
   key_name = "mahesh-keypair"
   vpc_security_group_ids = [aws_security_group.maheshSG.id ]
+  user_data = file("apacheinstall.sh")
   tags = {
     "Name" = "maheshec2"
   }
