@@ -4,7 +4,7 @@ resource "aws_instance" "maheshec2" {
   ami = data.aws_ami.amazonlinux.id
   instance_type = var.aws_instance_type
   key_name = "terraform-keypair"
-  count = 1
+  count = var.aws_instance_count
   subnet_id = aws_subnet.maheshsubnet.id
   vpc_security_group_ids = [aws_security_group.maheshSG.id]
   user_data = file("apacheinstall.sh")
