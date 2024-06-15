@@ -3,7 +3,7 @@ resource "aws_instance" "maheshec2" {
   ami = data.aws_ami.amzlinux.id
   instance_type = var.aws_instance_type
   key_name = "mahesh-keypair"
-  vpc_security_group_ids = [aws_security_group.maheshSG2.id ]
+  vpc_security_group_ids = [aws_security_group.maheshSG3.id ]
   user_data = file("apacheinstall.sh")
   tags = {
     "Name" = "maheshec2"
