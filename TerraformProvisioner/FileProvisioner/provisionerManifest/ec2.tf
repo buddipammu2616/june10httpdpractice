@@ -12,4 +12,13 @@ resource "aws_instance" "maheshec2" {
     "Name" = "Maheshec2"
   }
   associate_public_ip_address = true
+
+#Connection block
+Connection {
+  type = "ssh"
+  host = self.public_ip
+  user = "ec2.user"
+  password = ""
+  terraformkeypair = "file(terraformkeypair/terraformkey.pem)"
+}
 }
