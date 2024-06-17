@@ -3,7 +3,7 @@ module "ec2_instance" {
   source = "terraform-aws-modules/ec2-instance/aws"
   version = "~>5.0"
   name = "single-instance"
-  ami = data.aws_ami.amzlinux
+  ami = data.aws_ami.amzlinux.id
   instance_type          = "t2.micro"
   key_name               = "mahesh-keypair"
   monitoring             = true
