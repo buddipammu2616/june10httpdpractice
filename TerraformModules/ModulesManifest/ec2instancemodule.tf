@@ -9,7 +9,7 @@ module "ec2_instance" {
   monitoring             = true
   vpc_security_group_ids = ["sg-0906b76fb440f5fb5"]
   subnet_id              = "subnet-0af09486c6368c568"
-  user_data              = file(apacheinstall.sh)
+  user_data              = file("apacheinstall.sh")
   tags = {
     Name        = "Ec2-Modules-Demo"
     Terraform   = "true"
