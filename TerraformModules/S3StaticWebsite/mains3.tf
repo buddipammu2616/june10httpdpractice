@@ -1,10 +1,9 @@
 #Create a Static website
 #create S3 bucket
 resource "aws_s3_bucket" "buddipammukushi1" {
-  bucket = "buddipammukushi1"
-  tags = {
-    "Name" = "buddipammukushi1"
-  }
+  bucket = var.bucket_name
+  tags = var.tags
+  force_destroy = true
 }
 #Create aws s3 bucket website configuration
 resource "aws_s3_bucket_website_configuration" "s3bucketwebsiteconfiguration" {
